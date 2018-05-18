@@ -9,8 +9,8 @@ var app=new Vue({
 		designerDetail:designerInfo[0],//要展示的设计师
 		designerList:[],//展示的设计师头像
 	},
-	created(){
-		console.log(this.designerDetail)
+	mounted(){
+		this.changeDesigner(this.designerDetail)
 	},
 	methods:{
 		//点击城市获取设计师列表
@@ -36,11 +36,7 @@ var app=new Vue({
 		},
 		//点击设计师获取设计师详情
 		changeDesigner(item){
-			for(let i=0;i< this.designerInfo.length;i++){
-				if(this.designerInfo[i].id==item.id){
-					this.designerDetail=this.designerInfo[i]					
-				}	
-			}
+			this.designerDetail=item;			
 			$('#works-content').load(item.html)
 		}
 	}

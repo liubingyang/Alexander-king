@@ -24,6 +24,7 @@ var designerInfo=[{
 			desiginSmallimg:commonUrl+'image/small-img.png',		
 			background:commonUrl+'image/index-bg.png',	
 			headImg:commonUrl+'image/king-head.png',
+			html:commonUrl+'page/king.html'
 		},{
 			name:'杨峻杰',	
 			id:'yangjunjie',
