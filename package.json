@@ -1,0 +1,23 @@
+{
+  "name": "Alexander-king",
+  "version": "1.0.0",
+  "description": "a",
+  "main": "king.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/liubingyang/Alexander-king.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/liubingyang/Alexander-king/issues"
+  },
+  "homepage": "https://github.com/liubingyang/Alexander-king#readme",
+  "devDependencies": {
+    "express": "^4.16.3"
+  }
+}
