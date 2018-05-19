@@ -99,7 +99,7 @@ body{
 }
 .design-wrap{
 	height: 910px;
-	/*background: url('../../image/king-bg.png') no-repeat left top /cover;*/
+	background: url('../../image/king-bg.png') no-repeat left top /cover;
 }
 .design-content{
 	width: 1080px;
@@ -108,6 +108,10 @@ body{
 	height: 100%;
 }
 .desigin-bigimg{
+	height: 605px;
+	width: 780px;
+	overflow: hidden;
+	background-size: url('../../image/king-bg.png') no-repeat left top /cover;
 	position: absolute;
 	right: 0;
 	top: 0;
@@ -115,6 +119,10 @@ body{
 }
 
 .desigin-smallimg{
+	height: 294px;
+	width: 422px;
+	overflow: hidden;
+	background-size: url('../../image/king-small.png') no-repeat left top /cover;
 	position: absolute;
 	right: 180px;
 	bottom: 48px;

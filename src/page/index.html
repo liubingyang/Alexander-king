@@ -32,7 +32,7 @@
 		<!-- 导航 -->
 		<div class="nav-list">
 			<ul class="country-list font-bold clearfix">
-				<li class="country-name" v-for='item in navInfo' @click='choseTo(item)'>{{item.name}}</li>			
+				<li class="country-name" :class='{"origin":item.active}'  v-for='item in navInfo' @click='choseTo(item)'>{{item.name}}</li>			
 			</ul>
 			<!-- 设计师列表 -->
 			<!-- <ul class="country-design hide">
@@ -84,12 +84,8 @@
 						<p>{{designerDetail.meContent[1]}}</p>
 					</div>
 				</div>
-				<div class="desigin-bigimg">
-					<img :src=designerDetail.desiginBigimg alt="">
-				</div>
-				<div class="desigin-smallimg">				
-					<img :src=designerDetail.desiginSmallimg alt="">
-				</div>
+				<div class="desigin-bigimg" :style='{"background-image": "url("+designerDetail.desiginBigimg+")"}'></div>
+				<div class="desigin-smallimg" :style='{"background-image": "url("+designerDetail.desiginSmallimg+")"}'></div>
 			</div>
 		</div>
 		<!-- 设计作品 标题-->

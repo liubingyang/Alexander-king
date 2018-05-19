@@ -11,13 +11,39 @@ var app=new Vue({
 		designerList:[],//展示的设计师头像
 
 	},
+	created(){
+		
+	},
 	mounted(){
+		this.init();
 		this.changeDesigner(this.designerDetail)
 	},
 	methods:{
+		//页面初始化
+		init(){
+			let a=getSessionStorage('navInfo',true),b=getSessionStorage('designerDetail',true);
+			if(a){//处理导航栏及设计师头像展示
+				this.navInfo=a;
+				this.navInfo.forEach(v=>{
+					if(v.active){
+						this.designerHead(v);
+					}
+				})
+			};
+			if(b){
+				this.designerDetail=b;
+				$('#works-content').load(this.designerDetail.html)
+			}
+		},
 		//点击城市获取设计师列表
-		choseTo(item){
+		choseTo(item){			
+			this.navInfo.forEach(v=>{v.active=false})
+			item.active=true;			
 			this.designerList=[]
+			this.designerHead(item);
+		},
+		//处理并展示设计师头像
+		designerHead(item){
 			let midArr=[];
 			if(item.type=='city'){
 				this.counyryInfo=item;
@@ -27,12 +53,13 @@ var app=new Vue({
 					}
 				})
 			}	
+			let _this=this;
 			function run(arr){
 				if(arr.length<=6){
-					app.designerList.push(arr)
+					_this.designerList.push(arr)
 					return
 				}
-				app.designerList.push(arr.splice(0,6));
+				_this.designerList.push(arr.splice(0,6));
 				run(arr);					
 			}
 			run(midArr);
@@ -42,7 +69,9 @@ var app=new Vue({
 		},
 		//点击设计师获取设计师详情
 		changeDesigner(item){
-			this.designerDetail=item;			
+			setSessionStorage('designerDetail',item,true);
+			setSessionStorage('navInfo',this.navInfo,true);
+			this.designerDetail=item;				
 			$('#works-content').load(item.html)
 		},
 		//初始化设计师轮播
@@ -65,9 +94,9 @@ window.app=app;
 
 
 
-$('.country-name').on('click', function() {
-	$(this).addClass('origin').siblings().removeClass('origin')
-})
+// $('.country-name').on('click', function() {
+// 	$(this).addClass('origin').siblings().removeClass('origin')
+// })
 
 $('.country-design').on('mouseleave', function() {
 	$('.country-design').addClass('hide')
