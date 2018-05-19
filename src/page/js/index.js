@@ -5,9 +5,11 @@ var app=new Vue({
 		appShow:true,
 
 		designerInfo,//设计师数据
-		navInfo,//导航数据		
+		navInfo,//;导航数据
+		counyryInfo:{},//国旗和名字	
 		designerDetail:designerInfo[0],//要展示的设计师
 		designerList:[],//展示的设计师头像
+
 	},
 	mounted(){
 		this.changeDesigner(this.designerDetail)
@@ -18,6 +20,7 @@ var app=new Vue({
 			this.designerList=[]
 			let midArr=[];
 			if(item.type=='city'){
+				this.counyryInfo=item;
 				this.designerInfo.forEach(v=>{
 					if(v.city==item.city){
 						midArr.push(v)	
@@ -33,12 +36,28 @@ var app=new Vue({
 				run(arr);					
 			}
 			run(midArr);
+			setTimeout(()=>{
+				this.designerSwiper();
+			},10)	
 		},
 		//点击设计师获取设计师详情
 		changeDesigner(item){
 			this.designerDetail=item;			
 			$('#works-content').load(item.html)
+		},
+		//初始化设计师轮播
+		designerSwiper(){
+			new Swiper('#swiper-designer', {
+				direction: 'horizontal',
+				loop: false,
+				// 如果需要前进后退按钮
+				navigation: {
+					nextEl: '.next-designer',
+					prevEl: '.prev-designer',
+				},
+			})
 		}
+
 	}
 })
 
@@ -66,16 +85,6 @@ var mySwiper = new Swiper('#swiper-banner', {
 	navigation: {
 		nextEl: '.next-banner',
 		prevEl: '.prev-banner',
-	},
-
-})
-var designerBnner=new Swiper('#swiper-designer', {
-	direction: 'horizontal',
-	loop: false,
-	// 如果需要前进后退按钮
-	navigation: {
-		nextEl: '.next-designer',
-		prevEl: '.prev-designer',
 	},
 
 })

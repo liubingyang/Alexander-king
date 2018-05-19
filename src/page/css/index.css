@@ -99,7 +99,7 @@ body{
 }
 .design-wrap{
 	height: 910px;
-	background: url('../../image/index-bg.png') no-repeat left top /cover;
+	/*background: url('../../image/king-bg.png') no-repeat left top /cover;*/
 }
 .design-content{
 	width: 1080px;
