@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/liubingyang/Alexander-king#readme",
   "devDependencies": {
-    "express": "^4.16.3"
+    "express": "^4.16.3",
+    "gulp": "^3.9.1",
+    "gulp-imagemin": "^4.1.0"
   }
 }
