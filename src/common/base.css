@@ -82,6 +82,8 @@ html { overflow-y: scroll; }
 .mb10{margin-bottom: 10px;}
 .ml10{margin-left: 10px;}
 .mr10{margin-right: 10px;}
+.mr60{margin-right: 60px;}
+.mb60{margin-bottom: 60px;}
 .bg-f5{background-color: #f5f5f5}
 .vis-hide{visibility: hidden;}
 .vis-show{visibility: inherit;}
@@ -90,3 +92,5 @@ html { overflow-y: scroll; }
 .swiper-button-prev,.swiper-button-next{
     outline:none;
 }
+.pic-wrap{overflow: hidden;}
+.pic-wrap img{height: 100%;width: 100%}

@@ -1,3 +1,4 @@
+
 body{
 	background: #fff;
 }
@@ -90,7 +91,16 @@ body{
 	border-color: transparent transparent #fff transparent;
 	border-width: 0 12px 11px 12px;
 }
-
+.pic-wrap{
+	float: left;
+	height: 70px;
+	width: 70px;
+	margin-right: 64px;
+	cursor: pointer;
+}
+.pic-wrap:last-child{
+	margin-right: 0;
+}
 .design-name{
 	cursor: pointer;
 	display: inline-block;
@@ -263,20 +273,6 @@ body{
 .next-banner{
 	background-image: url(../../image/btn-next.png);
 	right: -103px;
-}
-.pic-wrap{
-	float: left;
-	height: 70px;
-	width: 70px;
-	margin-right: 64px;
-}
-.pic-wrap:last-child{
-	margin-right: 0;
-}
-.pic-wrap img{
-	height: 100%;
-	width: 100%;
-	cursor: pointer;
 }
 .designers{
 	height: 160px;

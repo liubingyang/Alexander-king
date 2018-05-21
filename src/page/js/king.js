@@ -1,5 +1,5 @@
 
-var mySwiper = new Swiper('#swiper-banner', {
+new Swiper('.banner-king', {
 	direction: 'horizontal',
 	loop: true,
 	// 如果需要前进后退按钮
