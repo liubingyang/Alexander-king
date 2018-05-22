@@ -92,5 +92,6 @@ html { overflow-y: scroll; }
 .swiper-button-prev,.swiper-button-next{
     outline:none;
 }
+.hvr-trim,.hvr-float-shadow{display: block;}
 .pic-wrap{overflow: hidden;}
 .pic-wrap img{height: 100%;width: 100%}
