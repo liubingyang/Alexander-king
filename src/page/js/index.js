@@ -32,7 +32,7 @@ var app=new Vue({
 			};
 			if(b){
 				this.designerDetail=b;
-				// $('#works-content').load(this.designerDetail.html)
+				$('#works-content').load(this.designerDetail.html)
 			}
 		},
 		//点击城市获取设计师列表
@@ -72,7 +72,7 @@ var app=new Vue({
 			setSessionStorage('designerDetail',item,true);
 			setSessionStorage('navInfo',this.navInfo,true);
 			this.designerDetail=item;				
-			// $('#works-content').load(item.html)
+			$('#works-content').load(item.html)
 		},
 		//初始化设计师轮播
 		designerSwiper(){
