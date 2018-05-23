@@ -1,5 +1,5 @@
 
-new Swiper('.swiper-container.banner-king', {
+new Swiper('.swiper-container.banner-fangfang', {
 	direction: 'horizontal',
 	loop: true,
 	// 如果需要前进后退按钮
