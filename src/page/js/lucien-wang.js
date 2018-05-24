@@ -1,4 +1,4 @@
-new Swiper('.banner-lucien-wang', {
+new Swiper('.swiper-container.banner-lucien-wang', {
 	direction: 'horizontal',
 	loop: true,
 	// 如果需要前进后退按钮

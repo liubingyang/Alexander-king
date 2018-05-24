@@ -12,6 +12,7 @@
 	<script type="text/javascript" src="../common/swiper.min.js"></script>
 	<script type="text/javascript" src="../common/base.js"></script>
 	<script type="text/javascript" src="../common/vue.min.js"></script>
+	<script src="http://s22.cnzz.com/z_stat.php?id=1273779163&web_id=1273779163" language="JavaScript"></script>
 </head>
 <body>
 	<div id='app' class="vis-hide" :class='{"vis-show":appShow}'>
@@ -34,11 +35,7 @@
 			<ul class="country-list font-bold clearfix">
 				<li class="country-name" :class='{"origin":item.active}'  v-for='item in navInfo' @click='choseTo(item)'>{{item.name}}</li>			
 			</ul>
-			<!-- 设计师列表 -->
-			<!-- <ul class="country-design hide">
-				<li class="design-name">ALEXANDER KING</li>
-				<li class="design-name">ALEXANDER WANG</li>
-			</ul> -->
+			<!-- 设计师列表 -->			
 			<div class="designers clearfix">
 				<div class="national-flag fl clearfix">
 					<div  class="nine-point text-center fl">
@@ -46,6 +43,7 @@
 					</div>
 					<div class="flag-pic fl" >
 						<img :src=counyryInfo.countryFlag alt="">
+						<!-- <div class="counyryInfo-name">{{counyryInfo.country}}</div> -->
 						<div class="one-point"></div>
 					</div>
 				</div>
@@ -54,8 +52,12 @@
 					    <div class="swiper-wrapper">
 					        <div class="swiper-slide swiper-no-swiping" v-for='item in designerList'>
 					        	<ul class="designer-list clearfix">
-					        		<li class="hvr-grow pic-wrap" v-for='it in item' @click='changeDesigner(it)'>
-					        			<img :src=it.headImg alt="">
+					        		<li class="head-wrap" v-for='it in item' @click='changeDesigner(it)'>
+					        			<div class="hvr-grow" :class='{"designer-active":it.active}'>
+					        				<img :src=it.headImg alt="">
+					        			</div>
+					        			
+					        			<p class="designer-name text-center">{{it.name}}</p>
 					        		</li>					        				        		
 					        	</ul>
 					        </div>

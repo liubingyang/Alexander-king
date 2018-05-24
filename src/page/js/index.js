@@ -16,11 +16,11 @@ var app=new Vue({
 	},
 	mounted(){
 		this.init();
-		this.changeDesigner(this.designerDetail)
 	},
 	methods:{
 		//页面初始化
 		init(){
+			this.designerInfo=getSessionStorage('designerInfo',true)||designerInfo;
 			let a=getSessionStorage('navInfo',true),b=getSessionStorage('designerDetail',true);
 			if(a){//处理导航栏及设计师头像展示
 				this.navInfo=a;
@@ -69,10 +69,15 @@ var app=new Vue({
 		},
 		//点击设计师获取设计师详情
 		changeDesigner(item){
+			this.designerInfo.forEach(v=>{
+				v.active=false;
+			})
+			item.active=true;
+			setSessionStorage('designerInfo',this.designerInfo,true);
 			setSessionStorage('designerDetail',item,true);
 			setSessionStorage('navInfo',this.navInfo,true);
 			this.designerDetail=item;				
-			$('#works-content').load(item.html)
+			$('#works-content').load(item.html)		
 		},
 		//初始化设计师轮播
 		designerSwiper(){

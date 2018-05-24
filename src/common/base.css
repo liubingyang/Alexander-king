@@ -96,3 +96,9 @@ html { overflow-y: scroll; }
 .hvr-trim,.hvr-float-shadow{display: block;}
 .pic-wrap{overflow: hidden;}
 .pic-wrap img{height: 100%;width: 100%}
+
+/*站站统计按钮隐藏*/
+a[title='站长统计']{
+    position: absolute;
+    opacity: 0;
+}
