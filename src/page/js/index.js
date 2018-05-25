@@ -11,9 +11,6 @@ var app=new Vue({
 		designerList:[],//展示的设计师头像
 
 	},
-	created(){
-		
-	},
 	mounted(){
 		this.init();
 	},
@@ -21,7 +18,8 @@ var app=new Vue({
 		//页面初始化
 		init(){
 			this.designerInfo=getSessionStorage('designerInfo',true)||designerInfo;
-			let a=getSessionStorage('navInfo',true),b=getSessionStorage('designerDetail',true);
+			let a=getSessionStorage('navInfo',true),
+				b=getSessionStorage('designerDetail',true);
 			if(a){//处理导航栏及设计师头像展示
 				this.navInfo=a;
 				this.navInfo.forEach(v=>{
@@ -111,11 +109,6 @@ var app=new Vue({
 window.app=app;
 
 
-
-// $('.country-name').on('click', function() {
-// 	$(this).addClass('origin').siblings().removeClass('origin')
-// })
-
 $('.country-design').on('mouseleave', function() {
 	$('.country-design').addClass('hide')
 })
@@ -124,17 +117,4 @@ $('.country-design').on('mouseover', function() {
 })
 $('.design-name').on('mouseover', function() {
 	$(this).addClass('origin').siblings().removeClass('origin')
-})
-var mySwiper = new Swiper('#swiper-banner', {
-	direction: 'horizontal',
-	loop: true,
-	// 如果需要前进后退按钮
-	navigation: {
-		nextEl: '.next-banner',
-		prevEl: '.prev-banner',
-	},
-
-})
-$('.shouye').click(function(){
-	$('#aa').load('../wang/wang.html')
 })
