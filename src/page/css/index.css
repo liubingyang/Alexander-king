@@ -336,6 +336,12 @@ body{
     transform: scale(1.3);
 }
 
+.video-wrap{width: 1080px;height: 600px; overflow: hidden;margin:0 auto;position: relative;}
+.video-wrap:hover .play-btn{display: block;}
+.video-wrap video{height: 100%;width: 100%;}
+.play-btn{background: url(../../image/play.png) no-repeat;position: absolute;left: 50%;top:50%;height: 140px;width: 140px;cursor: pointer;transform: translate(-50%,-50%);}
+.hide.play-btn{background-image: url(../../image/stop.png);}
+
 .three-pic .design-pic1{height: 418px;width: 412px;overflow: hidden;}
 .three-pic .design-pic2{height: 660px;width: 658px;overflow: hidden;}
 .three-pic .design-pic3{height: 232px;width: 412px;overflow: hidden;}

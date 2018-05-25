@@ -434,7 +434,7 @@ var designerInfo=[{
 		},{
 			name:'乔根·西蒙森',	
 			id:'jorgesimonsen',
-			city:'denmark',			
+			city:'NorthernEurope',			
 			active:false,					
 			discribCity:'DENMARK',
 			discribTit:'乔根·西蒙森',
