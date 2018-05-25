@@ -66,7 +66,11 @@ var app=new Vue({
 			setTimeout(()=>{
 				this.designerSwiper();
 			},10)	
+
 		},
+		
+
+
 		//点击设计师获取设计师详情
 		changeDesigner(item){
 			this.designerInfo.forEach(v=>{
@@ -81,7 +85,7 @@ var app=new Vue({
 		},
 		//初始化设计师轮播
 		designerSwiper(){
-			new Swiper('#swiper-designer', {
+			var listSwiper=new Swiper('#swiper-designer', {
 				direction: 'horizontal',
 				loop: false,
 				// 如果需要前进后退按钮
@@ -90,6 +94,15 @@ var app=new Vue({
 					prevEl: '.prev-designer',
 				},
 			})
+			//如果默认展示的设计师在轮播图第二或者第三页
+			if(this.designerList.length>1){
+				if(this.designerDetail.index>6){
+					listSwiper.slideNext();
+				}
+				if(this.designerDetail.index>12){
+					listSwiper.slideNext();
+				}
+			}
 		}
 
 	}
