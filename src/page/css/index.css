@@ -98,6 +98,9 @@ body{
 	margin-right: 64px;
 	cursor: pointer;
 }
+.head-wrap:hover .white-point{
+	background: #f15a31;
+}
 .head-wrap img{height: 100%;width: 100%}
 .head-wrap:last-child{
 	margin-right: 0;
@@ -106,7 +109,8 @@ body{
 	margin-top:20px;
 	font-size: 14px;
 	color:#f15a31;
-	width: 100%;
+	width: 100px;
+	margin-left: -15px;
 	white-space: nowrap;
 }
 .designer-active{
@@ -133,7 +137,7 @@ body{
 	height: 605px;
 	width: 780px;
 	overflow: hidden;
-	background-size: url('../../image/king-big.jpg') no-repeat left top /cover;
+	background: url('../../image/king-big.jpg') no-repeat left top /cover;
 	position: absolute;
 	right: 0;
 	top: 0;
@@ -144,7 +148,7 @@ body{
 	height: 294px;
 	width: 422px;
 	overflow: hidden;
-	background-size: url('../../image/king-small.jpg') no-repeat left top /cover;
+	background: url('../../image/king-small.jpg') no-repeat left top /cover;
 	position: absolute;
 	right: 180px;
 	bottom: 48px;
@@ -189,6 +193,7 @@ body{
 	height: 50px;
 }
 .discrib-brand{
+	white-space: nowrap;
 	margin-top:18px;
 	line-height: 30px;
 	font-size: 18px;
@@ -205,6 +210,13 @@ body{
 	text-indent: 2em;
 	font-stretch: 16px;
 	letter-spacing: 1px;
+}
+.white-point{
+	 width: 4px;
+    height: 4px;
+    background: #fff;
+    border-radius: 50%;
+    margin: 25px 0 0 34px;
 }
 .works-tit{
 	margin: 138px 0 56px 0 ;

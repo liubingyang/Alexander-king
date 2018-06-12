@@ -73,8 +73,10 @@ var app=new Vue({
 		changeDesigner(item){
 			this.designerInfo.forEach(v=>{
 				v.active=false;
+				v.showName=false;
 			})
 			item.active=true;
+			item.showName=true;
 			setSessionStorage('designerInfo',this.designerInfo,true);
 			setSessionStorage('designerDetail',item,true);
 			setSessionStorage('navInfo',this.navInfo,true);

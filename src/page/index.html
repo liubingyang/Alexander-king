@@ -57,7 +57,9 @@
 					        				<img :src=it.headImg alt="">
 					        			</div>
 					        			
-					        			<p class="designer-name text-center">{{it.name}}</p>
+					        			<p v-show='it.showName' class="designer-name text-center">{{it.name}}</p>
+					        			<div v-show='!it.showName' class="white-point"></div>
+
 					        		</li>					        				        		
 					        	</ul>
 					        </div>

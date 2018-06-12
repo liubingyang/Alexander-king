@@ -32,7 +32,8 @@ var navInfo=[
 ];
 // 设计师信息
 var designerInfo=[{
-			name:'KING',
+			name:'Alexander King',
+			showName:false,
 			id:'king',
 			city:'newYork',					
 			active:false,					
@@ -49,6 +50,7 @@ var designerInfo=[{
 			html:commonUrl+'page/king.html'
 		},{
 			name:'杨峻杰',	
+			showName:false,
 			id:'yangjunjie',
 			city:'newYork',			
 			active:false,					
@@ -64,12 +66,13 @@ var designerInfo=[{
 			countryFlag:commonUrl+'image/American.png',
 			html:commonUrl+'page/yangjunjie.html'
 		},{
-			name:'王大仁',	
+			name:'Alexander Wang',	
+			showName:false,
 			id:'wangdaren',
 			city:'newYork',			
 			active:false,					
 			discribCity:'NEW YORK',
-			discribTit:'Alexander Wang',
+			discribTit:'ALEXANDER WANG',
 			discribBrand:['王大仁是华裔ABC','纽约最红最年轻的华裔设计师'],
 			meContent:['1984年出生于美国旧金山，18岁时搬去纽约，并在纽约著名得时装设计学院Parsons攻读设计专业，Alexander二年级时就在Marc Jacobs品牌和《Vogue》杂志实习，多次获得CFDA等颁发的时装界大奖，他的设计堪称叫好又叫座，销售更是节节攀升。',' 在刚刚过去的2018纽约时装周，王大仁与哥本哈根皮草展开了合作。主要的销售区域在全球各地。'],
 			desiginBigimg:commonUrl+'image/wangdaren-big.jpg',
@@ -81,6 +84,7 @@ var designerInfo=[{
 			html:commonUrl+'page/wangdaren.html'
 		},{
 			name:'张旸',	
+			showName:false,
 			id:'zhangyang',
 			city:'taiwan',			
 			active:false,					
@@ -97,6 +101,7 @@ var designerInfo=[{
 			html:commonUrl+'page/zhangyang.html'
 		},{
 			name:'郭培',	
+			showName:false,
 			id:'guopei',
 			city:'Paris',			
 			active:false,					
@@ -113,6 +118,7 @@ var designerInfo=[{
 			html:commonUrl+'page/guopei.html'
 		},{
 			name:'Lucien-Wang',	
+			showName:false,
 			id:'lucien-wang',
 			city:'Paris',			
 			active:false,					
@@ -129,6 +135,7 @@ var designerInfo=[{
 			html:commonUrl+'page/lucien-wang.html'
 		},{
 			name:'FangFang',	
+			showName:false,
 			id:'fangfang',
 			city:'Milan',			
 			active:false,					
@@ -145,6 +152,7 @@ var designerInfo=[{
 			html:commonUrl+'page/fangfang.html'
 		},{
 			name:'刘璐璐',	
+			showName:false,
 			id:'liululu',
 			city:'London',			
 			active:false,					
@@ -161,6 +169,7 @@ var designerInfo=[{
 			html:commonUrl+'page/liululu.html'
 		},{
 			name:'谢锋',	
+			showName:false,
 			id:'xiefeng',
 			city:'China',			
 			active:false,					
@@ -177,6 +186,7 @@ var designerInfo=[{
 			html:commonUrl+'page/xiefeng.html'
 		},{
 			name:'祁刚',	
+			showName:false,
 			id:'qigang',
 			city:'China',			
 			active:false,					
@@ -193,6 +203,7 @@ var designerInfo=[{
 			html:commonUrl+'page/qigang.html'
 		},{
 			name:'王玉涛',	
+			showName:false,
 			id:'wangyutao',
 			city:'China',			
 			active:false,					
@@ -209,6 +220,7 @@ var designerInfo=[{
 			html:commonUrl+'page/wangyutao.html'
 		},{
 			name:'RanFan',	
+			showName:false,
 			id:'fanran',
 			city:'China',			
 			active:false,					
@@ -225,6 +237,7 @@ var designerInfo=[{
 			html:commonUrl+'page/fanran.html'
 		},{
 			name:'姜悦音',	
+			showName:false,
 			id:'jiangyueyin',
 			city:'China',			
 			active:false,					
@@ -241,6 +254,7 @@ var designerInfo=[{
 			html:commonUrl+'page/jiangyueyin.html'
 		},{
 			name:'魏腾飞',	
+			showName:false,
 			id:'weitengfei',
 			city:'China',			
 			active:false,					
@@ -257,6 +271,7 @@ var designerInfo=[{
 			html:commonUrl+'page/weitengfei.html'
 		},{
 			name:'刘芳',	
+			showName:false,
 			id:'liufang',
 			city:'China',			
 			active:false,
@@ -274,6 +289,7 @@ var designerInfo=[{
 			html:commonUrl+'page/liufang.html'
 		},{
 			name:'秦旭',	
+			showName:false,
 			id:'qinxu',
 			city:'China',			
 			active:false,	
@@ -291,6 +307,7 @@ var designerInfo=[{
 			html:commonUrl+'page/qinxu.html'
 		},{
 			name:'CJ姚',	
+			showName:false,
 			id:'CJyao',
 			city:'China',			
 			active:false,
@@ -308,6 +325,7 @@ var designerInfo=[{
 			html:commonUrl+'page/CJyao.html'
 		},{
 			name:'杨芳',	
+			showName:false,
 			id:'yangfang',
 			city:'China',			
 			active:false,
@@ -325,6 +343,7 @@ var designerInfo=[{
 			html:commonUrl+'page/yangfang.html'
 		},{
 			name:'王聪',	
+			showName:false,
 			id:'wangcong',
 			city:'China',			
 			active:false,
@@ -342,6 +361,7 @@ var designerInfo=[{
 			html:commonUrl+'page/wangcong.html'
 		},{
 			name:'邹游',	
+			showName:false,
 			id:'zouyou',
 			city:'China',			
 			active:false,	
@@ -359,6 +379,7 @@ var designerInfo=[{
 			html:commonUrl+'page/zouyou.html'
 		},{
 			name:'齐斌',	
+			showName:false,
 			id:'qibin',
 			city:'China',			
 			active:false,	
@@ -376,6 +397,7 @@ var designerInfo=[{
 			html:commonUrl+'page/qibin.html'
 		},{
 			name:'匡峻',	
+			showName:false,
 			id:'kuangjun',
 			city:'China',			
 			active:false,	
@@ -393,6 +415,7 @@ var designerInfo=[{
 			html:commonUrl+'page/kuangjun.html'
 		},{
 			name:'康悦',	
+			showName:false,
 			id:'kangyue',
 			city:'China',			
 			active:false,		
@@ -410,6 +433,7 @@ var designerInfo=[{
 			html:commonUrl+'page/kangyue.html'
 		},{
 			name:'朱小杰',	
+			showName:false,
 			id:'zhuxiaojie',
 			city:'China',			
 			active:false,	
@@ -427,6 +451,7 @@ var designerInfo=[{
 			html:commonUrl+'page/zhuxiaojie.html'
 		},{
 			name:'赵伟伟',	
+			showName:false,
 			id:'zhaoweiwei',
 			city:'China',			
 			active:false,	
@@ -444,6 +469,7 @@ var designerInfo=[{
 			html:commonUrl+'page/zhaoweiwei.html'
 		},{
 			name:'乔根·西蒙森',	
+			showName:false,
 			id:'jorgesimonsen',
 			city:'NorthernEurope',			
 			active:false,					
@@ -460,6 +486,7 @@ var designerInfo=[{
 			html:commonUrl+'page/jorgesimonsen.html'
 		},{
 			name:'时尚合作',	
+			showName:false,
 			id:'shishanghezuo',
 			city:'shishanghezuo',			
 			active:false,					
@@ -476,6 +503,7 @@ var designerInfo=[{
 			html:commonUrl+'page/shishanghezuo.html'
 		},{
 			name:'法新集团',	
+			showName:false,
 			id:'faxinjituan',
 			city:'shishanghezuo',			
 			active:false,					
