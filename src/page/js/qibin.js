@@ -9,3 +9,20 @@ var mySwiper = new Swiper('.swiper-container.banner-qibin', {
 	},
 
 })
+
+var myVideo=document.getElementsByClassName('wangyutao-video1')[0];
+
+$('.play-btn').click(function(){
+	$(this).toggleClass('hide');
+	if($(this).hasClass('hide')){
+		myVideo.play();
+	}else{
+		myVideo.pause();
+	}
+
+	
+})
+
+myVideo.onended=function(){
+	$('.play-btn').toggleClass('hide');
+}

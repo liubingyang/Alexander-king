@@ -22,3 +22,7 @@ $('.play-btn').click(function(){
 
 	
 })
+
+myVideo.onended=function(){
+	$('.play-btn').toggleClass('hide');
+}
