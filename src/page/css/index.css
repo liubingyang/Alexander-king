@@ -273,6 +273,13 @@ body{
 	height: 304px;
 	padding-top: 90px;
 }
+.beian-code{
+	font-size: 18px;
+    color: #959595;
+    letter-spacing: 3px;
+    margin-top: 90px;
+}
+   
 .banner{
 	width: 1080px;
 	margin:55px auto 122px;
