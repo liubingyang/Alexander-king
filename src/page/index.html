@@ -91,7 +91,7 @@
 							<img src="../image/index-pic1-3.jpg" alt="">				
 				        </div>			       			        
 				    </div> 
-				    <div class="swiper-pagination pagination-index"></div> 
+				    <div class="swiper-pagination pagination-sessionone" style="opacity: 0;height: 0;overflow: hidden;"></div> 
 				</div>
 				<div class="fl words">
 					<p class="origin f18">关于哥本哈根皮草</p>
@@ -195,7 +195,7 @@
 		<!-- 作品部分 -->
 		<div v-show='!indexShow' id='works-content'></div>
 		<!-- 返回首页 -->
-		<div v-show='!indexShow' class="return-index text-center font-bold">返回首页</div>
+		<div v-show='!indexShow' class="return-index text-center font-bold" @click='returnIndex'>返回首页</div>
 		<!-- 底部 -->
 		<div class="footer text-center bg-black">
 			<img src="./../image/logo-white.png" alt="">

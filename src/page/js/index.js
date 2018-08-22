@@ -12,6 +12,8 @@ var app=new Vue({
 
 		indexShow:true,//首页展示
 		navShow:false,//设计师列表展示
+
+		swi:{},
 	},
 	mounted(){
 		this.init();
@@ -40,17 +42,23 @@ var app=new Vue({
 		},
 		//点击城市获取设计师列表
 		choseTo(item){
-		if(item.name=='首页'){
-			this.indexShow=this.designerDetail.indexShow=true;
-			this.navShow=this.designerDetail.navShow=false;
-			setSessionStorage('designerDetail',this.designerDetail,true);
-		}else{
-			this.navShow=true;
-		}			
-			this.navInfo.forEach(v=>{v.active=false})
-			item.active=true;			
-			this.designerList=[]
-			this.designerHead(item);
+			if(item.name=='首页'){
+				this.indexShow=this.designerDetail.indexShow=true;
+				this.navShow=this.designerDetail.navShow=false;
+				setSessionStorage('designerDetail',this.designerDetail,true);
+				setTimeout(()=>{
+					$('.pagination-sessionone .swiper-pagination-bullet')[0].click();
+					$('.pagination-index .swiper-pagination-bullet')[0].click();
+				},50)
+
+			}else{
+				this.navShow=true;
+			}			
+				this.navInfo.forEach(v=>{v.active=false})
+				item.active=true;
+				item.name=='首页'?setSessionStorage('navInfo',this.navInfo,true):'';			
+				this.designerList=[]
+				this.designerHead(item);
 		},
 		//处理并展示设计师头像
 		designerHead(item){
@@ -101,7 +109,6 @@ var app=new Vue({
 			setSessionStorage('navInfo',this.navInfo,true);
 			this.designerDetail=item;				
 			$('#works-content').load(item.html);	
-
 						
 		},
 		//初始化设计师轮播
@@ -132,16 +139,24 @@ var app=new Vue({
 				direction : 'horizontal',
 				loop : true,
 				pagination: {
-				    el: '.swiper-pagination',
+				    el: '.swiper-pagination.pagination-index',
 				     clickable :true,
 				  },
 			})
 			//小图轮播
-			new Swiper('.banner-sessionone', {
+			var swi2=new Swiper('.banner-sessionone', {
 				autoplay:{autoplay : 4000,disableOnInteraction:false},
 				direction : 'horizontal',
 				loop : true,
+				pagination: {
+				    el: '.swiper-pagination.pagination-sessionone',
+				     clickable :true,
+				  },
 			})
+		},
+		returnIndex(){
+			this.choseTo(this.navInfo[0])
+			window.scrollTo(0,100);	
 		}
 
 	}
