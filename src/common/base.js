@@ -20,7 +20,7 @@ function getSessionStorage(k,b){
 
 //导航信息
 var navInfo=[
-{name:'首页'},
+{name:'首页',active:true},
 {name:'中国',active:false,type:'city',city:'China',countryFlag:commonUrl+'image/flag-China.png'},
 {name:'巴黎',active:false,type:'city',city:'Paris',countryFlag:commonUrl+'image/flag-France.png'},
 {name:'纽约',active:false,type:'city',city:'newYork',countryFlag:commonUrl+'image/flag-American.png'},
@@ -28,7 +28,7 @@ var navInfo=[
 {name:'米兰',active:false,type:'city',city:'Milan',countryFlag:commonUrl+'image/flag-Italy.png'},
 {name:'台湾',active:false,type:'city',city:'taiwan',countryFlag:commonUrl+'image/flag-China.png'},
 {name:'北欧',active:false,type:'city',city:'NorthernEurope',countryFlag:commonUrl+'image/flag-NorthernEurope.png'},
-{name:'时尚合作',active:false,type:'city',city:'shishanghezuo',countryFlag:commonUrl+'image/flag-Fashion.png'},
+{name:'时尚合作',active:false,city:'shishanghezuo',countryFlag:commonUrl+'image/flag-Fashion.png'},
 ];
 // 设计师信息
 var designerInfo=[{

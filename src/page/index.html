@@ -31,12 +31,12 @@
 			</div>
 		</div>
 		<!-- 导航 -->
-		<div class="nav-list">
+		<div  class="nav-list">
 			<ul class="country-list font-bold clearfix">
 				<li class="country-name" :class='{"origin":item.active}'  v-for='item in navInfo' @click='choseTo(item)'>{{item.name}}</li>			
 			</ul>
 			<!-- 设计师列表 -->			
-			<div class="designers clearfix">
+			<div  v-show='navShow' class="designers clearfix">
 				<div class="national-flag fl clearfix">
 					<div  class="nine-point text-center fl">
 						<img src="../image/nine-point.png" alt="">
@@ -72,8 +72,96 @@
 				</div>
 			</div>
 		</div>
+		
+		<!-- 首页内容 -->
+		<div v-show='indexShow'>
+			<div class="index-sessionone container clearfix">
+				
+				<div class="swiper-container banner-sessionone pic fl">
+				    <div class="swiper-wrapper">
+				        <div class="swiper-slide">
+							<img src="../image/index-pic1.jpg" alt="">				
+				        </div>
+				        <div class="swiper-slide">
+				        	<img src="../image/index-pic1-2.jpg" alt="">					
+				        </div>	
+				        <div class="swiper-slide">
+							<img src="../image/index-pic1-3.jpg" alt="">				
+				        </div>			       			        
+				    </div> 
+				    <div class="swiper-pagination pagination-index"></div> 
+				</div>
+				<div class="fl words">
+					<p class="origin f18">关于哥本哈根皮草</p>
+					<p class="origin mb20">Kopenhagen Fur’s History</p>
+					<p>Kopenhagen Fur是世界上最大的毛皮拍卖及贸易中心。该公司由1.600名丹麦水貂养殖者共同拥有，并在1930年成立丹麦动物养殖者者协会。</p>
+					<p class="f14 gray mb20">Kopenhagen Fur is the world's largest fur auction house and trade center, founded the Danish Fur Breeders Association in 1930 and cooperatively owned by 1600 mink breeders.</p>
+					<p>自成立以来，哥本哈根皮草拥有明确的发展目标并伴随着企业创进意识，其整体目标是通过收集和分享知识来开发、优化和改进皮草生产，并采用先进的设备和最人性化的条件保障,这是在哥本哈根皮草的基础价值核心。</p>
+					<p class="f14 gray mb20">As always, Kopenhagen Fur embraces clear target and innovation conscious, its whole target is to develop and improve fur production by knowledge collection and sharing, as well as adapt advancing equipment and most humane security, which is the basic core value of Kopenhagen Fur.</p>
+					<p>随着我们不断发展，我们已成为皮草和时装行业最具创新精神的合作伙伴，并将持续深化和铸造具有北欧特色的皮草时尚创新孵化平台。</p>
+					<p class="f14 gray">Kopenhagen Fur has became the most innovation partner in fur and fashion industry, and will continuously create and deepen the Nordic incubator platform of fur fashion.</p>						
+				</div>
+			</div>
+			
+			<div class="index-sessiontwo">
+				<div class="swiper-container banner-index">
+				    <div class="swiper-wrapper">
+				        <div class="swiper-slide">
+							<img src="../image/index-banner1.jpg" alt="">					
+				        </div>
+				        <div class="swiper-slide">
+				        	<img src="../image/index-banner2.jpg" alt="">							
+				        </div>	
+				        <div class="swiper-slide">
+							<img src="../image/index-banner3.jpg" alt="">							
+				        </div>	
+				        <div class="swiper-slide">
+							<img src="../image/index-banner4.jpg" alt="">							
+				        </div>			        
+				    </div> 
+				    <div class="swiper-pagination pagination-index"></div> 
+				</div>
+			</div>
+
+			<div class="index-sessionthree">
+					<div class="three-tit">
+						<p>我们的愿景是成为世界领先的可持续皮草之家</p>
+						<p class="f20 gray">We want to be the world’s leading sustainable house of fur</p>
+					</div>
+					<img src="../image/index-word-point.jpg" alt="">
+					<ul class="index-citys">
+						<li :class=item.city @click='clickMap(item)' v-if=item.type=='city' v-for='item in navInfo'><img src="../image/index-point.gif" alt=""><span>{{item.name}}</span></li>
+						<!-- <li class="London" @click='changeDesigner("liululu")'><img src="../image/index-point.gif" alt=""><span>伦敦</span></li>
+						<li class="Paris" @click='changeDesigner("guopei")'><img src="../image/index-point.gif" alt=""><span>巴黎</span></li>
+						<li class="NorthernEurope" @click='changeDesigner("jorgesimonsen")'><img src="../image/index-point.gif" alt=""><span>北欧</span></li>
+						<li class="Milan" @click='changeDesigner("fangfang")'><img src="../image/index-point.gif" alt=""><span>米兰</span></li>
+						<li class="China" @click='changeDesigner("xiefeng")'><img src="../image/index-point.gif" alt=""><span>中国</span></li>
+						<li class="Taiwan" @click='changeDesigner("zhangyang")'><img src="../image/index-point.gif" alt=""><span>台湾</span></li> -->
+				</ul>
+			</div>
+
+			<div class="index-sessionfour">
+				<img src="../image/index-pic3.jpg" alt="">			
+			</div>
+
+			<div class="index-sessionfive container clearfix">
+				<div class="five-left fl">
+					<div class="five-pic4"><img src="../image/index-pic4.jpg" alt=""></div>
+					<div class="five-pic6"><img src="../image/index-pic6.jpg" alt=""></div>
+					<div class="five-pic8"><img src="../image/index-pic8.jpg" alt=""></div>
+				</div>
+				<div class="five-right fl">
+					<div class="five-pic5"><img src="../image/index-pic5.jpg" alt=""></div>
+					<div class="five-pic7"><img src="../image/index-pic7.jpg" alt=""></div>
+					<div class="five-pic9"><img src="../image/index-pic9.jpg" alt=""></div>
+					<div class="five-pic10"><img src="../image/index-pic10.jpg" alt=""></div>	
+				</div>
+				<div class="five-pic11"><img src="../image/index-pic11.jpg" alt=""></div>						
+			</div>
+		</div>
+
 		<!-- 人物介绍 -->
-		<div class="design-wrap" :style='{"background-image": "url("+designerDetail.background+")"}'>
+		<div v-show='!indexShow' class="design-wrap" :style='{"background-image": "url("+designerDetail.background+")"}'>
 			<div class="design-content">
 				<div class="design-discrib">
 					<div class="discrib-city font-bold">{{designerDetail.discribCity}}</div>
@@ -93,7 +181,7 @@
 			</div>
 		</div>
 		<!-- 设计作品 标题-->
-		<div class="works-tit text-center">
+		<div v-show='!indexShow' class="works-tit text-center">
 			<div class="works-logo">
 				<img src="../image/works-logo.png" alt="">
 			</div>
@@ -103,14 +191,14 @@
 		</div>
 
 		<!-- 作品部分 -->
-		<div id='works-content'></div>
+		<div v-show='!indexShow' id='works-content'></div>
 		<!-- 返回首页 -->
-			<div class="return-index text-center font-bold">返回首页</div>
-			<!-- 底部 -->
-			<div class="footer text-center bg-black">
-				<img src="./../image/logo-white.png" alt="">
-				<p class="beian-code">京ICP备18036178号</p>
-			</div>
+		<div v-show='!indexShow' class="return-index text-center font-bold">返回首页</div>
+		<!-- 底部 -->
+		<div class="footer text-center bg-black">
+			<img src="./../image/logo-white.png" alt="">
+			<p class="beian-code">京ICP备18036178号</p>
+		</div>
 	</div>	
 	<script type="text/javascript" src="./../common/base.js"></script>
 	<script type="text/javascript" src="./js/index.js"></script>

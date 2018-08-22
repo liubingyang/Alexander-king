@@ -10,9 +10,12 @@ var app=new Vue({
 		designerDetail:designerInfo[0],//要展示的设计师
 		designerList:[],//展示的设计师头像
 
+		indexShow:true,//首页展示
+		navShow:false,//设计师列表展示
 	},
 	mounted(){
 		this.init();
+		this.indexBanner();//首页轮播图
 	},
 	methods:{
 		//页面初始化
@@ -30,11 +33,20 @@ var app=new Vue({
 			};
 			if(b){
 				this.designerDetail=b;
+				this.indexShow=this.designerDetail.indexShow;
+				this.navShow=this.designerDetail.navShow;
 				$('#works-content').load(this.designerDetail.html)
 			}
 		},
 		//点击城市获取设计师列表
-		choseTo(item){			
+		choseTo(item){
+		if(item.name=='首页'){
+			this.indexShow=this.designerDetail.indexShow=true;
+			this.navShow=this.designerDetail.navShow=false;
+			setSessionStorage('designerDetail',this.designerDetail,true);
+		}else{
+			this.navShow=true;
+		}			
 			this.navInfo.forEach(v=>{v.active=false})
 			item.active=true;			
 			this.designerList=[]
@@ -67,10 +79,17 @@ var app=new Vue({
 
 		},
 		
-
+		//点击地图
+		clickMap(item){
+			this.choseTo(item);
+			this.changeDesigner(this.designerList[0][0])
+						window.scrollTo(0,100);	
+		},
 
 		//点击设计师获取设计师详情
 		changeDesigner(item){
+			this.indexShow=item.indexShow=false;
+			this.navShow=item.navShow=true;
 			this.designerInfo.forEach(v=>{
 				v.active=false;
 				v.showName=false;
@@ -81,7 +100,9 @@ var app=new Vue({
 			setSessionStorage('designerDetail',item,true);
 			setSessionStorage('navInfo',this.navInfo,true);
 			this.designerDetail=item;				
-			$('#works-content').load(item.html)		
+			$('#works-content').load(item.html);	
+
+						
 		},
 		//初始化设计师轮播
 		designerSwiper(){
@@ -103,6 +124,24 @@ var app=new Vue({
 					listSwiper.slideNext();
 				}
 			}
+		},
+		// 首页轮播图
+		indexBanner(){
+			var swi=new Swiper('.swiper-container.banner-index', {
+				autoplay:{autoplay : 2000,disableOnInteraction:false},
+				direction : 'horizontal',
+				loop : true,
+				pagination: {
+				    el: '.swiper-pagination',
+				     clickable :true,
+				  },
+			})
+			//小图轮播
+			new Swiper('.banner-sessionone', {
+				autoplay:{autoplay : 4000,disableOnInteraction:false},
+				direction : 'horizontal',
+				loop : true,
+			})
 		}
 
 	}

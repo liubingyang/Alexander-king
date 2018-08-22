@@ -302,7 +302,7 @@ body{
 .designers{
 	height: 160px;
 	background: #304551;
-	margin: 30px 0 15px;
+	margin-top: 30px;
 }
 .national-flag{
 	width: 170px;
@@ -393,3 +393,48 @@ body{
 .nine-banner .pic8-wrap{width: 232px;height: 288px;overflow: hidden;}
 .nine-banner .pic9-wrap{width: 356px;height: 246px;overflow: hidden;}
 .nine-banner img{height: 100%;width: 100%}
+
+
+
+
+
+
+
+/*首页样式*/
+.index-sessionone{margin-top:60px;}
+.index-sessionone .pic{height: 580px;width: 412px;margin-right: 30px;overflow: hidden;}
+.index-sessionone img{height: 100%;width: 100%}
+.index-sessionone .words{width: 605px; font-size: 16px; color:#000; line-height: 28px; padding-top: 20px;}
+.index-sessiontwo .swiper-container{min-width:1080px;max-width: 1920px; max-height: 1080px; overflow: hidden; margin: 0 auto; margin-top:100px;}
+.index-sessiontwo img{width: 100%;}
+.index-sessiontwo .swiper-pagination-bullet{height: 20px;width: 20px;margin:0 10px !important; background-color: #fff !important; opacity: .2;}
+.index-sessiontwo .swiper-pagination-bullet-active{opacity: .9 !important; width: 40px; border-radius: 10px;}
+.index-sessionthree{max-height: 1020px; max-width: 1920px; min-width: 1080px;margin: 0 auto; margin-top: 100px; overflow: hidden;position: relative;}
+.index-sessionthree .three-tit{font-size: 36px; text-align: center; line-height: 60px;}
+.index-sessionthree img{width: 100%; height: 100%; position: relative;}
+.index-sessionthree .three-tit{position: absolute; text-align: center; width:100%;padding-top: 70px;font-size: 26px;}
+.index-sessionfour{max-height: 865px; max-width: 1920px; min-width: 1080px;margin: 0 auto; margin-top: 100px;}
+.index-sessionfour img{height: 100%;width: 100%;}
+.index-sessionfive{position: relative;}
+.five-pic4{margin: -150px 0 142px;}
+.five-left{width: 516px;}
+.five-pic5{margin:75px 0 88px;}
+.five-pic8{margin-top:130px;}
+.five-pic9{margin:135px 0 130px;}
+.five-pic10{margin-bottom: 88px;}
+.five-pic11{margin-bottom: 56px;}
+.index-citys{position: absolute;left: 0;top:0; height: 100%; width: 100%;}
+.index-citys li{position: absolute; width: 3.5%;height: 6%; cursor: pointer;}
+.index-citys li image{transform: scale(1); height: 100%; width: 100%;}
+
+.index-citys li span{position: absolute; bottom: 0; white-space: nowrap; left: 50%; transform: translateX(-50%); text-align: center; padding:0 10px; border-radius: 5px; color: #fff;background-color: #d2135e;line-height: 18px; font-size: 12px; display: none; cursor: pointer;}
+.index-citys li:hover span{display: block;}
+.index-citys li:hover image{transform: scale(2);}
+
+.index-citys .newYork{left:36%;top:55%;}
+.index-citys .London{left:46%;top:53%; z-index: 1}
+.index-citys .Paris{left:46%;top:58%;}
+.index-citys .NorthernEurope{left:49.5%;top:54%; z-index: 1}
+.index-citys .Milan{left:48.5%;top:57%;}
+.index-citys .China{left:65%;top:58%;}
+.index-citys .taiwan{left:66.5%;top:64%;}
