@@ -11,6 +11,17 @@ body{
 .header-weixin{
 	margin-right: 20px;
 	cursor: pointer;
+	position: relative;
+}
+.weixin-erweima{
+	position: absolute;
+	height: 150px;
+	z-index: 2;
+	left: -80px;
+	display: none;
+}
+.header-weixin:hover .weixin-erweima{
+	display: block;
 }
 .header-weibo{
 	margin-right: 42px;
