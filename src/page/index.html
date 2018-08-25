@@ -132,13 +132,8 @@
 					</div>
 					<img src="../image/index-word-point.jpg" alt="">
 					<ul class="index-citys">
-						<li :class=item.city @click='clickMap(item)' v-if=item.type=='city' v-for='item in navInfo'><img src="../image/index-point.gif" alt=""><span>{{item.name}}</span></li>
-						<!-- <li class="London" @click='changeDesigner("liululu")'><img src="../image/index-point.gif" alt=""><span>伦敦</span></li>
-						<li class="Paris" @click='changeDesigner("guopei")'><img src="../image/index-point.gif" alt=""><span>巴黎</span></li>
-						<li class="NorthernEurope" @click='changeDesigner("jorgesimonsen")'><img src="../image/index-point.gif" alt=""><span>北欧</span></li>
-						<li class="Milan" @click='changeDesigner("fangfang")'><img src="../image/index-point.gif" alt=""><span>米兰</span></li>
-						<li class="China" @click='changeDesigner("xiefeng")'><img src="../image/index-point.gif" alt=""><span>中国</span></li>
-						<li class="Taiwan" @click='changeDesigner("zhangyang")'><img src="../image/index-point.gif" alt=""><span>台湾</span></li> -->
+						<li :class=item.city @click='clickMap(item)' v-if=item.mapShow v-for='item in navInfo'><img src="../image/index-point.gif" alt=""><span>{{item.name}}</span></li>
+					
 				</ul>
 			</div>
 
