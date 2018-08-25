@@ -23,12 +23,10 @@
 			</div>
 			<div class="wx-wb clearfix">
 				<div class="header-weixin fr">
-					<img src="../image/weixin.png">
 					<img class="weixin-erweima" src="../image/weixin.jpg" alt="">
 				</div>
 				<div class="header-weibo fr">
-					<a href="https://weibo.com/kopenhagenfur" target='_blank' title=""><img src="../image/weibo.png"></a>
-
+					<a href="https://weibo.com/kopenhagenfur" target='_blank' title=""></a>
 				</div>			
 			</div>
 		</div>
@@ -77,8 +75,10 @@
 		
 		<!-- 首页内容 -->
 		<div v-show='indexShow'>
+
 			<div class="index-sessionone container clearfix">
-				
+				<div class="xingxing">x x x x x x</div>
+				<div class="henggang"><img src="../image/index-henggang.png" alt=""></div>
 				<div class="swiper-container banner-sessionone pic fl">
 				    <div class="swiper-wrapper">
 				        <div class="swiper-slide">
@@ -166,9 +166,9 @@
 		<div v-show='!indexShow' class="design-wrap" :style='{"background-image": "url("+designerDetail.background+")"}'>
 			<div class="design-content">
 				<div class="design-discrib">
-					<div class="discrib-city font-bold">{{designerDetail.discribCity}}</div>
-					<div class="discrib-tit origin">{{designerDetail.discribTit}}</div>
-					<div class="discrib-smalltit font-bold">DESIGNER</div> 
+					<div class="discrib-city">{{designerDetail.discribCity}}</div>
+					<div class="discrib-tit origin font-bold">{{designerDetail.discribTit}}</div>
+					<div class="discrib-smalltit">DESIGNER</div> 
 					<div class="discrib-line bg-black"></div>
 					<div class="discrib-brand ">{{designerDetail.discribBrand[0]}}<br>{{designerDetail.discribBrand[1]}}</div>
 					<div class="discrib-line bg-gray"></div>
@@ -188,7 +188,7 @@
 				<img src="../image/works-logo.png" alt="">
 			</div>
 			<div class="throw-line">
-				<span class="throw-name">设计作品</span>
+				<span class="throw-name font-bold">设计作品</span>
 			</div>
 		</div>
 

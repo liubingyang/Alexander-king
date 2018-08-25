@@ -175,7 +175,7 @@ var designerInfo=[{
 			active:false,					
 			discribCity:'CHINA',
 			discribTit:'谢锋',
-			discribBrand:['第一位被巴黎时装工会邀请的中国设计师',''],
+			discribBrand:['第一位被巴黎时装工会邀请的中','国设计师'],
 			meContent:[' 北京吉芬时装设计股份有限公司艺术总监、董事长，中国时尚的开拓者. 1999年，创立设计师品牌JEFEN（吉芬）。','  2006年10月1日，个人所创立JEFEN品牌被选入巴黎时装周，于巴黎卢浮宫举办成衣发布会，成为中国在巴黎时装周发布的第一人。主要的销售区域为中国国内。'],
 			desiginBigimg:commonUrl+'image/xiefeng-big.jpg',
 			desiginSmallimg:commonUrl+'image/xiefeng-small.jpg',		
